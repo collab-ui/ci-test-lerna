@@ -1,0 +1,201 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { omit } from 'lodash';
+import { Input } from '@collabui/react';
+
+/**
+ * @category controls
+ * @component editable-textfield
+ * @variations collab-ui-react
+ */
+
+class EditableTextfield extends React.Component {
+  static displayName = 'EditableTextfield';
+
+  state = {
+    isEditing: false,
+    inputText: this.props.inputText,
+  };
+
+  componentDidUpdate = () => {
+    if (this.state.isEditing && this.editText) {
+      this.editText.focus();
+    }
+  }
+
+  handleEnter = (e, value) => {
+    const { handleDoneEditing } = this.props;
+    e.persist();
+
+    this.setState(
+      {
+        isEditing: false,
+        inputText: value,
+      },
+      () => handleDoneEditing && handleDoneEditing(e, {value})
+    );
+
+    e.nativeEvent.stopImmediatePropagation();
+  }
+
+  handleBlur = (e, value) => {
+    const { handleDoneEditing } = this.props;
+    e.persist();
+
+    this.setState(
+      {
+        isEditing: false,
+        inputText: value,
+      },
+      () => handleDoneEditing && handleDoneEditing(e, {value})
+    );
+  }
+
+  handleEsc = e => {
+    this.setState(
+      {
+        isEditing: false
+      }
+    );
+    e.nativeEvent.stopImmediatePropagation();
+  }
+
+  handleClick = () => {
+    const { disabled } = this.props;
+
+    if(disabled) {
+      return;
+    } else {
+      this.setState({
+        isEditing: true,
+      });
+    }
+  }
+
+  handleKey = () => {
+    const { disabled } = this.props;
+
+    if(disabled) {
+      return;
+    } else {
+      this.setState({
+        isEditing: true
+      });
+    }
+  }
+
+  handleDoneKeyDown = e => {
+    if (e.keyCode === 27) {
+      this.handleEsc(e);
+    } else if (e.keyCode === 13){
+      this.handleEnter(e, e.target.value);
+    }
+  }
+
+  render() {
+    const {
+      alignment,
+      buttonClassName,
+      buttonProps,
+      className,
+      ...props
+    } = this.props;
+    const { isEditing, inputText } = this.state;
+
+    const inputProps = omit({...props}, [
+      'disabled',
+      'handleDoneEditing',
+      'inputText',
+    ]);
+
+    return(
+      <span
+        className={
+          'cui-editable-textfield' +
+          `${alignment && ` cui-editable-textfield--${alignment}` || ''}`
+        }
+      >
+        {isEditing &&
+          <Input
+            className={
+              'cui-editable-textfield__editing' +
+              `${className && ` ${className}` || ''}`
+            }
+            inputRef={(input) => { this.editText = input; }}
+            onDoneEditing={this.handleBlur}
+            onKeyDown={this.handleDoneKeyDown}
+            value={inputText}
+            {...inputProps}
+          />
+        }
+        {!isEditing &&
+          <div
+            role='button'
+            tabIndex={0}
+            className={
+              'cui-editable-textfield__button' +
+              `${buttonClassName && ` ${buttonClassName}` || ''}`
+            }
+            onClick={this.handleClick}
+            onKeyPress={this.handleKey}
+            {...buttonProps}
+          >
+            {inputText || '\u00a0'}
+          </div>
+        }
+      </span>
+    );
+  }
+}
+
+EditableTextfield.propTypes = {
+  /** @prop Alignment css modifier | 'left' */
+  alignment: PropTypes.oneOf(['center', 'left', 'right']),
+  /** @ Optional css class name for internal button | null */
+  buttonClassName: PropTypes.string,
+  /** @prop Optional props for internal button | '' */
+  buttonProps: PropTypes.shape({}),
+  /** @prop Optional css class string | '' */
+  className: PropTypes.string,
+  /** @prop Sets the disable attribute for EditableTextField | false */
+  disabled: PropTypes.bool,
+  /** @prop Optional function for blur | null */
+  handleDoneEditing: PropTypes.func,
+  /** @prop Text to be shown within input field | null */
+  inputText: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+};
+
+EditableTextfield.defaultProps = {
+  alignment: 'left',
+  buttonClassName: '',
+  buttonProps: null,
+  className: '',
+  disabled: false,
+  handleDoneEditing: null,
+  inputText: '',
+};
+
+export default EditableTextfield;
+
+/**
+* @component editable-textfield
+* @section default
+* @react
+import { EditableTextfield } from '@collabui/react';
+
+export default class EditableTextFieldDefault extends React.Component {
+  valueChange = (value) => {
+    newValue = value;
+  }
+
+  render() {
+    return (
+      <EditableTextfield
+        handleDoneEditing={(e, data) => console.log(e, data)}
+        inputText='Hello World'
+      />
+    );
+  }
+}
+
+**/

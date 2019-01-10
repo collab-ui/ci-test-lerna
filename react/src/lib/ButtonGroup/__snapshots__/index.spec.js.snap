@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <ButtonGroup /> should match SnapShot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ButtonGroup
+    activeIndex={null}
+    ariaLabel=""
+    className=""
+    focusOnLoad={false}
+    highlightSelected={true}
+    justified={true}
+    onSelect={null}
+    pillWidth="60px"
+    theme=""
+    type=""
+  >
+    <Button
+      active={false}
+      ariaLabel="test"
+      ariaLabelledBy=""
+      circle={false}
+      className=""
+      color=""
+      containerLarge={false}
+      disabled={false}
+      expand={false}
+      href=""
+      index={null}
+      label=""
+      large={false}
+      loading={false}
+      onClick={null}
+      removeStyle={false}
+      size={36}
+      style={Object {}}
+      tag="button"
+      type="button"
+    >
+      1
+    </Button>
+  </ButtonGroup>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "aria-label": "",
+      "children": Array [
+        <Button
+          active={false}
+          ariaLabel="test"
+          ariaLabelledBy=""
+          circle={false}
+          className=""
+          color=""
+          containerLarge={false}
+          disabled={false}
+          expand={false}
+          href=""
+          index={0}
+          label=""
+          large={false}
+          loading={false}
+          onClick={null}
+          removeStyle={false}
+          size={36}
+          style={
+            Object {
+              "width": "60px",
+            }
+          }
+          tag="button"
+          type="button"
+        >
+          1
+        </Button>,
+      ],
+      "className": "cui-button-group cui-button-group--justified",
+      "role": "group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": ".0",
+        "nodeType": "class",
+        "props": Object {
+          "active": false,
+          "ariaLabel": "test",
+          "ariaLabelledBy": "",
+          "children": "1",
+          "circle": false,
+          "className": "",
+          "color": "",
+          "containerLarge": false,
+          "disabled": false,
+          "expand": false,
+          "href": "",
+          "index": 0,
+          "label": "",
+          "large": false,
+          "loading": false,
+          "onClick": null,
+          "removeStyle": false,
+          "size": 36,
+          "style": Object {
+            "width": "60px",
+          },
+          "tag": "button",
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": "1",
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "aria-label": "",
+        "children": Array [
+          <Button
+            active={false}
+            ariaLabel="test"
+            ariaLabelledBy=""
+            circle={false}
+            className=""
+            color=""
+            containerLarge={false}
+            disabled={false}
+            expand={false}
+            href=""
+            index={0}
+            label=""
+            large={false}
+            loading={false}
+            onClick={null}
+            removeStyle={false}
+            size={36}
+            style={
+              Object {
+                "width": "60px",
+              }
+            }
+            tag="button"
+            type="button"
+          >
+            1
+          </Button>,
+        ],
+        "className": "cui-button-group cui-button-group--justified",
+        "role": "group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": ".0",
+          "nodeType": "class",
+          "props": Object {
+            "active": false,
+            "ariaLabel": "test",
+            "ariaLabelledBy": "",
+            "children": "1",
+            "circle": false,
+            "className": "",
+            "color": "",
+            "containerLarge": false,
+            "disabled": false,
+            "expand": false,
+            "href": "",
+            "index": 0,
+            "label": "",
+            "large": false,
+            "loading": false,
+            "onClick": null,
+            "removeStyle": false,
+            "size": 36,
+            "style": Object {
+              "width": "60px",
+            },
+            "tag": "button",
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "1",
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
