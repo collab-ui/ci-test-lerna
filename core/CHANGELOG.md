@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.43.4](https://github.com/collab-ui/ci-test-lerna/compare/@collabui/core@10.43.3...@collabui/core@10.43.4) (2019-01-12)
+
+**Note:** Version bump only for package @collabui/core
+
+
+
+
+
 ## 10.43.3 (2019-01-12)
 
 **Note:** Version bump only for package @collabui/core
