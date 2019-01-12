@@ -1,6 +1,6 @@
 {
   "name": "@collabui/react",
-  "version": "10.2.2",
+  "version": "10.2.3",
   "description": "Cisco Collab UI framework for ReactJs applications",
   "author": "Cisco Systems, Inc.",
   "bugs": {
@@ -62,8 +62,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "@collabui/core": "^10.43.2",
-    "@collabui/icons": "^3.45.1",
+    "@collabui/core": "^10.43.3",
+    "@collabui/icons": "^3.46.0",
     "moment": "^2.22.0",
     "object-assign": "4.1.1",
     "react-aria-modal": "^2.11.1"

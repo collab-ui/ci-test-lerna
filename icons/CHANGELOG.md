@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.46.0 (2019-01-12)
+
+
+### Features
+
+* **icons:** add test file ([4399505](https://github.com/collab-ui/ci-test-lerna/commit/4399505))
+
+
+
+
+
 ## [3.45.1](https://github.com/collab-ui/collab-ui/compare/@collabui/icons@3.9.0...@collabui/icons@3.45.1) (2019-01-10)
 
 **Note:** Version bump only for package @collabui/icons
