@@ -1,0 +1,28 @@
+#!/bin/bash
+root=$(pwd)
+changed=$( lerna changed )
+
+lerna version --no-push --yes
+
+for i in $changed;
+do
+  library=$( basename $i )
+  directory="$root/$library"
+  cd $directory
+  npm publish
+  # echo $(pwd)
+done
+
+git add .
+git commit --amend --no-edit
+
+git push --tags
+
+for i in $changed;
+do
+  library=$( basename $i )
+  directory="$root/$library"
+  cd $directory
+  yarn ci:postpublish
+  # echo $(pwd)
+done
