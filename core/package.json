@@ -1,7 +1,7 @@
 {
   "name": "@collabui/core",
   "description": "Cisco Collab UI CSS Framework",
-  "version": "10.43.3",
+  "version": "10.43.4",
   "author": "Cisco Systems, Inc.",
   "homepage": "http://core.collab-ui.com/",
   "license": "MIT",
@@ -54,7 +54,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
     "@collab-ui/utils": "^3.1.0",
-    "@collabui/react": "^10.2.3",
+    "@collabui/react": "^10.3.0",
     "@gfx/zopfli": "^1.0.8",
     "autoprefixer": "^7.2.4",
     "babel-core": "^7.0.0-bridge.0",
