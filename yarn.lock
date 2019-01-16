@@ -1065,6 +1065,18 @@
     showdown "^1.8.3"
     yargs "^11.0.0"
 
+"@collabui/react@latest":
+  version "10.4.1"
+  resolved "https://registry.yarnpkg.com/@collabui/react/-/react-10.4.1.tgz#f9186c9c6fe32f058cb952dde93d22cd3a8e0577"
+  integrity sha512-HV3P2Mt1ggXWJVod5eIaJMRBlCEzbDxSLbu7nCre2vs2EYiArHzQ/+1Y+Suc9OMCs5v1+td9oDHTMxiylQuhfA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    "@collabui/core" "^10.43.4"
+    "@collabui/icons" "^3.46.0"
+    moment "^2.22.0"
+    object-assign "4.1.1"
+    react-aria-modal "^2.11.1"
+
 "@gfx/zopfli@^1.0.8":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@gfx/zopfli/-/zopfli-1.0.10.tgz#8cccfcbd670f676cb240812bcf8380c9a66da367"

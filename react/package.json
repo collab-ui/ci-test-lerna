@@ -163,6 +163,7 @@
     "setupTestFrameworkScriptFile": "<rootDir>/src/helpers/enzyme_setup"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
