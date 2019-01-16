@@ -1,18 +1,21 @@
 #!/bin/bash
+set -e
+
 root=$(pwd)
-changed=$( lerna changed)
+changed=$( lerna changed -p --toposort -l)
 
 lerna version --no-push --yes
 
 for i in $changed;
 do
-# echo $i
-  library=$( basename $i )
-  # echo $library
-  directory="$root/$library"
+echo $i
+  library="$(echo $i | cut -d':' -f2)"
+  directory="$(echo $i | cut -d':' -f1)"
+  version="$(echo $i | cut -d':' -f3)"
+  # library=$( basename $i )
+  # directory="$root/$library"
   cd $directory
   npm publish
-  # echo $(pwd)
 done
 
 git add .
@@ -22,8 +25,9 @@ git push --tags
 
 for i in $changed;
 do
-  library=$( basename $i )
-  directory="$root/$library"
+  # library=$( basename $i )
+  # directory="$root/$library"
+  directory="$(echo $i | cut -d':' -f1)"
   cd $directory
   yarn ci:postpublish
 done
