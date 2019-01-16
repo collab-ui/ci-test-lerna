@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.4.0](https://github.com/collab-ui/ci-test-lerna/compare/@collabui/react@10.2.3...@collabui/react@10.4.0) (2019-01-16)
+
+
+### Features
+
+* **core:** feature ([c7e9eb3](https://github.com/collab-ui/ci-test-lerna/commit/c7e9eb3))
+* **react:** add test file ([488c010](https://github.com/collab-ui/ci-test-lerna/commit/488c010))
+
+
+
+
+
 # [10.3.0](https://github.com/collab-ui/ci-test-lerna/compare/@collabui/react@10.2.3...@collabui/react@10.3.0) (2019-01-12)
 
 
