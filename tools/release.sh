@@ -1,6 +1,6 @@
 #!/bin/bash
 root=$(pwd)
-changed=$( lerna changed -l)
+changed=$( lerna changed)
 
 lerna version --no-push --yes
 
