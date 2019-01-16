@@ -1,12 +1,14 @@
 #!/bin/bash
 root=$(pwd)
-changed=$( lerna changed )
+changed=$( lerna changed -l)
 
 lerna version --no-push --yes
 
 for i in $changed;
 do
+# echo $i
   library=$( basename $i )
+  # echo $library
   directory="$root/$library"
   cd $directory
   npm publish
@@ -24,5 +26,5 @@ do
   directory="$root/$library"
   cd $directory
   yarn ci:postpublish
-  # echo $(pwd)
 done
+
