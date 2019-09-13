@@ -1,73 +1,28 @@
 {
-  "name": "@collabui/icons",
-  "version": "3.46.0",
-  "description": "The Cisco Collab UI Icons library allows developers to easily incorporate Webex Icons and CSS into any application.",
-  "keywords": [
-    "font",
-    "icon",
-    "Cisco",
-    "Webex",
-    "Cisco Spark",
-    "Spark UI",
-    "Collab UI"
-  ],
-  "style": "css/collab-ui-icons.css",
-  "main": "scss/collab-ui-icons.scss",
+  "name": "@momentum-ui/icons-sketch-kit",
+  "version": "1.0.0",
+  "description": "Momentum Design System icons ui sketch kit",
+  "main": "Momentum Icons.sketch",
   "scripts": {
-    "build": "yarn build:lib",
-    "build:lib": "node tools/icons-build.js",
-    "ci:postpublish": "node ../tools/postpublish.js",
-    "lint": "echo \"Success: lint\" && exit 0",
-    "prepublishOnly": "yarn build:lib",
-    "start": "yarn build:lib",
-    "test": "echo \"Success: test\" && exit 0",
-    "watch": "npm-watch"
-  },
-  "watch": {
-    "build": {
-      "patterns": [
-        "templates"
-      ],
-      "extensions": "hbs",
-      "quiet": false
-    }
-  },
-  "author": {
-    "name": "Paul Jeter",
-    "email": "pajeter@cisco.com"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/collab-ui/ci-test-lerna.git"
+    "url": "git+https://github.com/momentum-design/momentum-design-kit.git"
   },
-  "bugs": {
-    "url": "https://github.com/collab-ui/collab-ui-icons/issues"
-  },
+  "keywords": [
+    "cisco",
+    "momentum",
+    "momentum design",
+    "momentum ui",
+    "sketch",
+    "icons",
+    "library"
+  ],
+  "author": "Cisco Systems, Inc.",
   "license": "MIT",
-  "devDependencies": {
-    "@collab-ui/utils": "^2.1.5",
-    "autoprefixer": "7.1.6",
-    "dotenv": "4.0.0",
-    "fs-extra": "^5.0.0",
-    "glob": "^7.1.2",
-    "lodash": "^4.17.5",
-    "multi-glob": "^1.0.1",
-    "node-sass": "^4.8.3",
-    "node-watch": "^0.5.7",
-    "npm-watch": "^0.3.0",
-    "object-assign": "4.1.1",
-    "promise": "8.0.1",
-    "raf": "3.4.0",
-    "rimraf": "^2.6.2",
-    "svg-sprite": "^1.4.0",
-    "svg-sprite-loader": "^3.7.3",
-    "svgson": "^2.1.1",
-    "webfonts-generator": "https://github.com/mpalpha/webfonts-generator.git",
-    "yargs": "^11.0.0",
-    "yarn": "^1.7.0"
+  "bugs": {
+    "url": "https://github.com/momentum-design/momentum-design-kit/issues"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  }
+  "homepage": "https://momentum.design"
 }

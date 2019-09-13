@@ -1,29 +1,15 @@
 {
-  "npmClient": "yarn",
-  "packages": [
-    "core",
-    "icons",
-    "react",
-    "utils"
-  ],
-  "useWorkspaces": true,
+  "packages": ["Android", "Colors", "Icons", "iOS", "MacOS", "Web", "Windows"],
   "version": "independent",
+  "npmClient": "npm",
   "command": {
     "publish": {
-      "allowBranch": "master",
+      "allowBranch": ["master"],
       "conventionalCommits": true,
       "ignoreChanges": [
-        "**/__fixtures__/**",
-        "**/__mocks__/**",
-        "**/.circleci/**",
-        "**/tests/**",
-        "**/examples/**",
         "**/tools/**",
         "**/config/**",
-        "**/*.spec*",
-        "**/*.cy*",
-        "**/*.md",
-        "**/yarn.lock",
+        "**/package-lock.json",
         "**/package.json"
       ],
       "message": "chore(release): publish libraries [skip ci]"
