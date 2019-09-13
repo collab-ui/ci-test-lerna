@@ -18,6 +18,9 @@
   ],
   "author": "Cisco Systems, Inc.",
   "license": "MIT",
+  "scripts": {
+    "postPublish": "node ../tools/postpublish.js"
+  },
   "bugs": {
     "url": "https://github.com/momentum-design/momentum-design-kit/issues"
   },

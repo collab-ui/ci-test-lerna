@@ -4,7 +4,7 @@
   "description": "Momentum Design System MacOS ui sketch kit",
   "main": "Momentum UI MacOS.sketch",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postPublish": "node ../tools/postpublish.js"
   },
   "repository": {
     "type": "git",

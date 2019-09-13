@@ -4,7 +4,7 @@
   "description": "Momentum Design System sketch color palettes",
   "main": "Momentum Design - Full Palette.sketchpalette",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postPublish": "node ../tools/postpublish.js"
   },
   "repository": {
     "type": "git",

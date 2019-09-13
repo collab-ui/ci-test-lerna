@@ -4,7 +4,7 @@
   "description": "Momentum Design System icons ui sketch kit",
   "main": "Momentum Icons.sketch",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postPublish": "node ../tools/postpublish.js"
   },
   "repository": {
     "type": "git",

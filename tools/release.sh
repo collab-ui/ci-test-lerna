@@ -15,7 +15,6 @@ echo $i
   # library=$( basename $i )
   # directory="$root/$library"
   cd $directory
-  npm run prepublishOnly
   npx publish
 done
 
