@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/momentum-design/momentum-design-kit/compare/@local/macos-sketch-kit@1.1.0...@local/macos-sketch-kit@1.2.0) (2019-09-13)
+
+
+### Features
+
+* **MacOS:** adding a feature ([5b81cf4](https://github.com/momentum-design/momentum-design-kit/commit/5b81cf4))
+
+
+
+
+
 # [1.1.0](https://github.com/momentum-design/momentum-design-kit/compare/@local/macos-sketch-kit@1.0.2...@local/macos-sketch-kit@1.1.0) (2019-09-13)
 
 
