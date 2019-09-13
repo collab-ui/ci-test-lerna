@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/momentum-design/momentum-design-kit/compare/@local/macos-sketch-kit@1.2.2...@local/macos-sketch-kit@1.2.3) (2019-09-13)
+
+
+### Bug Fixes
+
+* **MacOS:** one more ‘gan ([59197ee](https://github.com/momentum-design/momentum-design-kit/commit/59197ee))
+
+
+
+
+
 ## [1.2.2](https://github.com/momentum-design/momentum-design-kit/compare/@local/macos-sketch-kit@1.2.1...@local/macos-sketch-kit@1.2.2) (2019-09-13)
 
 
