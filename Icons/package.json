@@ -1,6 +1,6 @@
 {
   "name": "@local/icons-sketch-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Momentum Design System icons ui sketch kit",
   "main": "Momentum Icons.sketch",
   "scripts": {
