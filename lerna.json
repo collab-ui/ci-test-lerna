@@ -1,5 +1,5 @@
 {
-  "packages": ["Android", "Colors", "Icons", "iOS", "MacOS", "Web", "Windows"],
+  "packages": ["Android", "Icons", "iOS", "MacOS", "Web", "Windows"],
   "version": "independent",
   "npmClient": "npm",
   "command": {
