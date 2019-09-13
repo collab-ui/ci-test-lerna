@@ -23,7 +23,7 @@ bundle.min.js.map
 .settings/
 *.sublime-workspace
 .history
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
