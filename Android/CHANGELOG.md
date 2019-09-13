@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/momentum-design/momentum-design-kit/compare/@local/android-sketch-kit@1.1.0...@local/android-sketch-kit@1.1.1) (2019-09-13)
+
+
+### Bug Fixes
+
+* **Android:** testing rss ([9a7b120](https://github.com/momentum-design/momentum-design-kit/commit/9a7b120))
+
+
+
+
+
 # [1.1.0](https://github.com/momentum-design/momentum-design-kit/compare/@local/android-sketch-kit@1.0.2...@local/android-sketch-kit@1.1.0) (2019-09-13)
 
 
