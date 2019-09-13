@@ -1,5 +1,5 @@
 {
-  "name": "@momentum-ui/windows-sketch-kit",
+  "name": "@local/windows-sketch-kit",
   "version": "1.0.0",
   "description": "Momentum Design System Windows ui sketch kit",
   "main": "Momentum UI Windows.sketch",

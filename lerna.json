@@ -10,7 +10,8 @@
         "**/tools/**",
         "**/config/**",
         "**/package-lock.json",
-        "**/package.json"
+        "**/package.json",
+        "**/*.md"
       ],
       "message": "chore(release): publish libraries [skip ci]"
     }

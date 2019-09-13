@@ -11,7 +11,7 @@ const { full_name } = gitUrlParse(repository.url);
 const releasesApi = `https://api.github.com/repos/${full_name}/releases`;
 const releasesUrl = `https://github.com/${full_name}/releases`;
 const GH_TOKEN = process.env.GITHUB_API_TOKEN;
-const webexTeams = require('ciscospark');
+const webexTeams = require('webex');
 
 const date = new Date();
 const year = date.getFullYear();
@@ -20,12 +20,17 @@ const day = date.getDate();
 const releaseDate = `${year}-${month}-${day}`;
 
 async function postPublish() {
-  const changelog = readFileSync(path.resolve(cwd, 'CHANGELOG.md'), { encoding: 'utf8' });
+  const changelog = readFileSync(path.resolve(cwd, 'CHANGELOG.md'), {
+    encoding: 'utf8',
+  });
   const release = getReleaseFromChangelog(changelog);
   const unpublishedRelease = await getUnpublishedRelease(release);
 
   if (!unpublishedRelease.isReleased) {
-    return await Promise.all([publishReleaseToGithub(unpublishedRelease.release), sendMessageToTeams(unpublishedRelease.release)]);
+    return await Promise.all([
+      publishReleaseToGithub(unpublishedRelease.release),
+      sendMessageToTeams(unpublishedRelease.release),
+    ]);
   }
 }
 
@@ -34,11 +39,23 @@ function getReleaseFromChangelog(changelog) {
   const processor = unified().use(markdown, { commonmark: true });
   const mdAST = processor.parse(changelog).children;
   return mdAST
-    .filter(heading => heading.type === 'heading' && (heading.children[0].type === 'link' || /[0-9]*\.[0-9]*\.[0-9]*/.test(heading.children[0].value)))
-    .map(({ children }) => (children[0].children ? children[0].children[0] : children[0]))
+    .filter(
+      heading =>
+        heading.type === 'heading' &&
+        (heading.children[0].type === 'link' ||
+          /[0-9]*\.[0-9]*\.[0-9]*/.test(heading.children[0].value)),
+    )
+    .map(({ children }) =>
+      children[0].children ? children[0].children[0] : children[0],
+    )
     .map((heading, index, array) => ({
       version: `${name}@${heading.value.split(' ')[0]}`,
-      content: changelogLines.slice(heading.position.start.line, index + 1 < array.length ? array[index + 1].position.start.line - 2 : undefined),
+      content: changelogLines.slice(
+        heading.position.start.line,
+        index + 1 < array.length
+          ? array[index + 1].position.start.line - 2
+          : undefined,
+      ),
     }))[0];
 }
 
@@ -50,8 +67,8 @@ async function getUnpublishedRelease(release) {
   });
   return {
     release,
-    isReleased: res.ok
-  }
+    isReleased: res.ok,
+  };
 }
 
 async function sendMessageToTeams(release) {
@@ -69,7 +86,10 @@ async function sendMessageToTeams(release) {
   const { content, version } = release;
   const messageVersion = version.replace(`${name}@`, 'v');
   const encodedVersion = encodeURIComponent(version);
-  const teamsMessage = `# ${name} \n` + `## [${messageVersion}](${releasesUrl}/tags/${encodedVersion}) (${releaseDate}) \n` + `${content.join('\n')}`;
+  const teamsMessage =
+    `# ${name} \n` +
+    `## [${messageVersion}](${releasesUrl}/tags/${encodedVersion}) (${releaseDate}) \n` +
+    `${content.join('\n')}`;
 
   return teams.messages.create({
     markdown: teamsMessage,
