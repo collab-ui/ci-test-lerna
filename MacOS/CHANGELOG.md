@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/collab-ui/ci-test-lerna/compare/@local/macos-sketch-kit@1.3.0...@local/macos-sketch-kit@2.0.0) (2019-09-14)
+
+
+### Features
+
+* **Android:** another feature ([445ee94](https://github.com/collab-ui/ci-test-lerna/commit/445ee94))
+* **MacOS:** trying to break it ([cb78898](https://github.com/collab-ui/ci-test-lerna/commit/cb78898))
+
+
+### BREAKING CHANGES
+
+* **MacOS:** This is a breaking change
+
+
+
+
+
 # [1.3.0](https://github.com/collab-ui/ci-test-lerna/compare/@local/macos-sketch-kit@1.2.3...@local/macos-sketch-kit@1.3.0) (2019-09-14)
 
 
