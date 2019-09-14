@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/collab-ui/ci-test-lerna/compare/@local/macos-sketch-kit@1.2.3...@local/macos-sketch-kit@1.3.0) (2019-09-14)
+
+
+### Features
+
+* **MacOS:** add a new feature ([81753ff](https://github.com/collab-ui/ci-test-lerna/commit/81753ff))
+
+
+
+
+
 ## [1.2.3](https://github.com/momentum-design/momentum-design-kit/compare/@local/macos-sketch-kit@1.2.2...@local/macos-sketch-kit@1.2.3) (2019-09-13)
 
 
