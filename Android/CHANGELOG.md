@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/collab-ui/ci-test-lerna/compare/@local/android-sketch-kit@1.3.0...@local/android-sketch-kit@1.3.1) (2019-09-14)
+
+
+### Bug Fixes
+
+* **Android:** another try ([509d344](https://github.com/collab-ui/ci-test-lerna/commit/509d344))
+
+
+
+
+
 # [1.3.0](https://github.com/collab-ui/ci-test-lerna/compare/@local/android-sketch-kit@1.2.0...@local/android-sketch-kit@1.3.0) (2019-09-14)
 
 
