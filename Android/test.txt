@@ -3,3 +3,8 @@ Another test
 Another test
 Another test
 Another test
+
+aws s3 cp ./.tmp/momentum-ui-android-sketch-rss.xml s3://downloads.collab-ui.com/test/momentum-ui-android-sketch-rss.xml --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+
+export AWS_ACCESS_KEY=AKIAJIVN2JM2PQDIAXSQ
+export AWS_SECRET_ACCESS_KEY=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
