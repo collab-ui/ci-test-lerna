@@ -13,7 +13,7 @@
     "prepublishOnly": "yarn build:lib",
     "postPublish": "node ../tools/postpublish.js",
     "release": "./tools/release.sh",
-    "publishRSS": "node ..tools/publishRSS.js"
+    "publishRSS": "node ./tools/publishRSS.js"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.4",

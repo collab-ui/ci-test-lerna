@@ -5,7 +5,7 @@
   "main": "Momentum UI Android.sketch",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/momentum-design/momentum-design-kit.git"
+    "url": "git+https://github.com/collab-ui/ci-test-lerna.git"
   },
   "keywords": [
     "cisco",
