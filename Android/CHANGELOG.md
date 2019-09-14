@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/collab-ui/ci-test-lerna/compare/@local/android-sketch-kit@1.1.1...@local/android-sketch-kit@1.2.0) (2019-09-14)
+
+
+### Features
+
+* **Android:** another feature ([445ee94](https://github.com/collab-ui/ci-test-lerna/commit/445ee94))
+
+
+
+
+
 ## [1.1.1](https://github.com/momentum-design/momentum-design-kit/compare/@local/android-sketch-kit@1.1.0...@local/android-sketch-kit@1.1.1) (2019-09-13)
 
 
