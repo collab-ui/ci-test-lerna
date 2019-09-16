@@ -4,10 +4,10 @@
 #
 version: 2
 jobs:
-  lint_test:
+  release:
     working_directory: ~/repo
     docker:
-      - image: circleci/node:8.11
+      - image: circleci/node:lts
     steps:
       - checkout
 
@@ -16,56 +16,17 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
 
-      - run: yarn install
-      - run: npm rebuild node-sass
-      - run: yarn bootstrap
+      - run: npm install
+      - run: npm run bootstrap
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn lint:all
-      - run: yarn ci:test
+      - run: npm run release
 
-  test_release:
-    working_directory: ~/repo
-    docker:
-      - image: circleci/node:8.11
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-
-      - run: yarn install
-      - run: npm rebuild node-sass
-      - run: yarn bootstrap
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: yarn lint:all
-      - run: yarn ci:test
-
-      - add_ssh_keys:
-          fingerprints:
-            - 8d:03:46:48:16:a2:7f:d4:97:2f:20:a1:fe:0e:81:35
-      - run:
-          name: Configure git defaults
-          command: git config user.email $GH_EMAIL && git config user.name $GH_USER
-      - run: echo "registry=https://registry.npmjs.org" > ~/.npmrc
-      - run: echo "registry \"https://registry.npmjs.org\"" > ~/.yarnrc
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-      - run: npm whoami
-      - run:
-          name: Publish Releases
-          command: yarn release
-
-workflows:
+  workflows:
   version: 2
   test:
     jobs:
-      - lint_test
+      - release
