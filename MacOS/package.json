@@ -1,6 +1,6 @@
 {
   "name": "@local/macos-sketch-kit",
-  "version": "2.0.0",
+  "version": "2.0.0-beta.0",
   "description": "Momentum Design System MacOS ui sketch kit",
   "main": "Momentum UI MacOS.sketch",
   "scripts": {
